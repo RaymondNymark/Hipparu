@@ -3,11 +3,10 @@
 @using Plk.Blazor.DragDrop
 @inject HttpClient Http
 
-<div class="@menuVisibility">
-    <div class = "title"><p> ひっぱる</p><br><p>Hipparu</p></div>
-    <div class = "menu-container">
-        <div class = "content">
-            <div class = "best-times">
+<div class="@menuVisibility menu-wrapper">
+    <div class="menu-content">
+        <div id="title-text"><span>ひっぱる Hipparu</span></div>
+        <div class="best-times" id="best-time-box">
                 <h3>Best times</h3>
                 <div class="time-table">
                     <div class="time-table-body">
@@ -26,19 +25,20 @@
                     </div>
                 </div>
             </div>
-            <div class="game-modes">
-                <h3>Select your game mode</h3>
-                <div class="buttons">
-                    <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana<br>ひらがな</button>
-                    <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana<br>カタカナ</button>
-                    <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
-                </div>
+        <div class="game-modes" id="game-mode-box">
+            <h3>Select your game mode</h3>
+            <div class="buttons">
+                <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana<br>ひらがな</button>
+                <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana<br>カタカナ</button>
+                <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
             </div>
+        </div>
+        <div class="" id="theme-toggler">
+            <p>toggle me!</p>
         </div>
     </div>
 </div>
-<br />
-<div class="@gameVisibility">
+<div class="@gameVisibility game-wrapper">
     <div class="game-container">
         @if (LastDropped != null)
         {

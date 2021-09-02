@@ -112,14 +112,6 @@ app {
     display: block;
   }
 }
-.visible {
-  display: inline-block;
-}
-
-.invisible {
-  display: none;
-}
-
 .flex-item {
   height: 45px;
   width: 45px;
@@ -619,66 +611,73 @@ table {
   border-spacing: 0;
 }
 
-#content-wrapper {
-  display: flex;
-  background-color: blue !important;
-}
-#content-wrapper div {
-  display: flex;
-  flex-grow: 1;
-  min-width: 1350px;
-}
-
-.menu-container {
+.menu-wrapper {
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  z-index: 2000;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.menu-container .content {
+.game-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  position: fixed;
+}
+
+.menu-content {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
   flex-direction: row;
-  gap: 2%;
+  flex-wrap: wrap;
+}
+.menu-content div {
+  flex-grow: 1;
 }
 
-.menu-container .content .best-times {
-  padding: 30px;
-  position: relative;
-  border: 3px solid #00aeef;
-  background: #e1e1e1;
+.game-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.visible {
+  display: inline-block;
+}
+
+.invisible {
+  display: none;
+}
+
+#title-text {
+  display: flex;
+  min-width: 100%;
+  margin: auto;
+}
+#title-text span {
+  flex: 1;
+  font-family: "Open Sans";
+  font-size: 24px;
   text-align: center;
 }
 
-.menu-container .content .game-modes {
-  padding: 30px;
-  position: relative;
-  border: 3px solid #f06eaa;
-  background: #e1e1e1;
-  text-align: center;
+#best-time-box {
+  flex-grow: 1;
 }
 
-/*TODO: Centre these in the box*/
-.menu-container .content .game-modes .h3 {
-  position: absolute;
+#game-mode-box {
+  flex-grow: 1;
 }
 
-.menu-container .content .game-modes .buttons {
-  display: flex;
-  flex-direction: row;
-  margin: 0 -1.5%;
-}
-
-.menu-container .game-modes .btn {
-  border: 0px;
-  color: #000;
-  background: #fff;
-  margin: 0 1.5%;
+#theme-toggler {
+  min-width: 100%;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=app.css.map */

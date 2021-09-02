@@ -1,0 +1,26 @@
+#title-text{
+    display: flex;
+    min-width: 100%;
+    margin: auto;
+    span{
+        flex: 1;
+        font-family: 'Open Sans';
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+#best-time-box{
+    flex-grow: 1;
+}
+
+#game-mode-box{
+    flex-grow: 1;
+}
+
+#theme-toggler{
+    min-width: 100%;
+    flex-grow: 1;
+}
+
+
